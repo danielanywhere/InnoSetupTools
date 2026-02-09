@@ -1,0 +1,26 @@
+{
+	"ProjectBuildLevel": "NETInstallIncluded",
+	"NETMajorVersion": 6,
+	"WorkingPath": "C:\\Files\\Dropbox\\Develop\\Shared\\CaptionAll",
+	"CSharpProjectFilename": "Source\\CaptionAll\\CaptionAll.csproj",
+	"ExeFilename": "Source\\CaptionAll\\bin\\Release\\net6.0-windows\\win-x64\\CaptionAll.exe",
+	"ShaThumbprint": "5852B965BC9A803E815363E73DAB64345E9B84BC",
+	"InnoScriptFilename": "SetupProject\\CaptionAllSetup.iss",
+	"InnoVersionVariable": "MyAppVersion",
+	"SetupFilename": "C:\\Files\\Dropbox\\Setups\\CaptionAllSetup.exe",
+	"Actions":
+	[
+		{
+			"Remarks":
+			[
+				"In this version, the version is updated within the Compile and Publish step."
+			],
+			"Active": false,
+			"ActionType": "SetVersion"
+		},
+		{
+			"ActionType": "CompileAndPublish",
+			"Options": [ "SetVersion:true" ]
+		}
+	]
+}
