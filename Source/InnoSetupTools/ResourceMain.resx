@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="moduleExecAndCaptureOutput" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+function ExecAndCaptureOutput(const Cmd, Params: string; var Output: string): Boolean;
+var
+  TempFile: string;
+  ResultCode: Integer;
+  Buffer: AnsiString;
+begin
+  Log('ExecAndCaptureOutput...');
+
+  TempFile := ExpandConstant('{tmp}\dotnet_output.txt');
+
+  Log(' Preparing to call ' + Cmd + ' ' + Params + ' &gt; "' + TempFile + '" 2&gt;&amp;1');
+
+  if Exec('cmd.exe',
+    '/c ' + Cmd + ' ' + Params + ' &gt; "' + TempFile + '" 2&gt;&amp;1"',
+    '',
+    SW_HIDE,
+    ewWaitUntilTerminated,
+    ResultCode) then
+  begin
+    if LoadStringFromFile(TempFile, Buffer) then
+    begin
+      Output := Buffer;
+      Result := True;
+      Exit;
+    end;
+  end;
+
+  Output := '';
+  Result := False;
+end;</value>
+    <comment>function ExecAndCaptureOutput(const Cmd, Params: string; var Output: string): Boolean;</comment>
+  </data>
+  <data name="moduleExtractMajorVersionFromInstaller" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+function ExtractMajorVersionFromInstaller(const FileName: string): Integer;
+var
+  VersionStart, DotPos: Integer;
+  VersionStr: string;
+begin
+  Log('ExtractMajorVersionFromInstaller...');
+
+  {
+    Version begins at position 24 in patterns like:
+    windowsdesktop-runtime-6.0.36-win-x64.exe
+    windowsdesktop-runtime-10.0.2-win-x64.exe
+  }
+  VersionStart := 24;
+
+  { Find the first '.' after the version start }
+  DotPos := PosEx('.', FileName, VersionStart);
+
+  if (DotPos &gt; VersionStart) then
+  begin
+    VersionStr := Copy(FileName, VersionStart, DotPos - VersionStart);
+    Result := StrToIntDef(VersionStr, 0);
+  end
+  else
+    { Fallback if pattern unexpected. }
+    Result := 0;
+end;</value>
+    <comment>function ExtractMajorVersionFromInstaller(const FileName: string): Integer;</comment>
+  </data>
+  <data name="moduleGetLine" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+function GetLine(const S: string; LineNumber: Integer): string;
+var
+  I, Count: Integer;
+  StartPos: Integer;
+begin
+  Count := 1;
+  StartPos := 1;
+
+  for I := 1 to Length(S) do
+  begin
+    if S[I] = #10 then
+    begin
+      if Count = LineNumber then
+      begin
+        Result := Trim(Copy(S, StartPos, I - StartPos));
+        Exit;
+      end;
+
+      Count := Count + 1;
+      StartPos := I + 1;
+    end;
+  end;
+
+  if Count = LineNumber then
+    Result := Trim(Copy(S, StartPos, Length(S) - StartPos + 1))
+  else
+    Result := '';
+end;</value>
+    <comment>function GetLine(const S: string; LineNumber: Integer): string;</comment>
+  </data>
+  <data name="moduleGetLineCount" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+function GetLineCount(const S: string): Integer;
+var
+  I: Integer;
+begin
+  Result := 1;
+  for I := 1 to Length(S) do
+  begin
+    if S[I] = #10 then
+      Result := Result + 1;
+  end;
+end;</value>
+    <comment>function GetLineCount: Integer;</comment>
+  </data>
+  <data name="moduleInitializeWizard" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+procedure InitializeWizard;
+begin
+  if NeedsDotNet then
+  begin
+    WizardForm.StatusLabel.Caption := 'Downloading .NET Runtime...';
+    idpDownloadFile('{RuntimeDownloadUrl}/{RuntimeVersion}/{RuntimeInstallerName}',ExpandConstant('{tmp}\\{RuntimeInstallerName}'));
+  end;
+end;</value>
+    <comment>procedure InitializeWizard;</comment>
+  </data>
+  <data name="moduleIsDotnetRuntimeInstalled" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+function IsDotnetRuntimeInstalled(MajorVersion: Integer): Boolean;
+var
+  Output, Line: string;
+  I: Integer;
+begin
+  Result := False;
+
+  Log('IsDotnetRuntimeInstalled...');
+
+  if not ExecAndCaptureOutput('dotnet', '--list-runtimes', Output) then
+  begin
+    Log(' Could not capture output from dotnet --list-runtimes');
+    Exit;
+  end;
+
+  I := 1;
+  while I &lt;= GetLineCount(Output) do
+  begin
+    Line := GetLine(Output, I);
+
+    Log('Reading line: ' + Line);
+
+    if Pos('Microsoft.WindowsDesktop.App ' + IntToStr(MajorVersion) + '.', Line) = 1 then
+    begin
+      Log(' Line found...');
+      Result := True;
+      Exit;
+    end;
+
+    I := I + 1;
+  end;
+end;</value>
+    <comment>function IsDotnetRuntimeInstalled(MajorVersion: Integer): Boolean;</comment>
+  </data>
+  <data name="moduleNeedsDotNet" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+function NeedsDotNet(): Boolean;
+var
+  Major: Integer;
+begin
+  Log('NeedsDotNet...');
+
+  Major := ExtractMajorVersionFromInstaller('{RuntimeInstallerName}');
+  Log(Format(' Major .NET Version: %d', [Major]));
+
+  if Major = 0 then
+  begin
+    Log('Error: Unable to determine .NET major version from installer name: {RuntimeInstallerName}');
+    Result := True;
+    Exit;
+  end;
+
+  Result := not IsDotnetRuntimeInstalled(Major);
+end;</value>
+    <comment>function NeedsDotNet(): Boolean;</comment>
+  </data>
+  <data name="modulePosEx" xml:space="preserve">
+    <value>{ Auto-generated function. Remove this tag to customize. }
+function PosEx(const SubStr, S: string; Offset: Integer): Integer;
+var
+  I: Integer;
+begin
+  Result := 0;
+
+  if Offset &lt; 1 then
+    Offset := 1;
+
+  for I := Offset to (Length(S) - Length(SubStr) + 1) do
+  begin
+    if Copy(S, I, Length(SubStr)) = SubStr then
+    begin
+      Result := I;
+      Exit;
+    end;
+  end;
+end;</value>
+    <comment>function PosEx(const SubStr, S: string; Offset: Integer): Integer;</comment>
+  </data>
+  <data name="msgSignToolNotFound" xml:space="preserve">
+    <value>Please specify SignTool.exe path and filename or set your
+ SIGNTOOLPATH environment variable to the path
+ to the path where SIGNTOOL.EXE is located.</value>
+    <comment>SignTool not found error message.</comment>
+  </data>
+  <data name="rxAutogeneratedTag" xml:space="preserve">
+    <value>(?i:\s*\{\s*Auto-{0,1}generated\s*function\.{0,1}\s*Remove\s*this\s*tag\s*to\s*customize\.{0,1}\s*\})</value>
+    <comment>Regular expression to determine whether the line contains the auto-generated tag message.</comment>
+  </data>
+  <data name="rxBoolTrue" xml:space="preserve">
+    <value>(?i:(?&lt;bool&gt;1|True|Yes|^OK|Up|Good|Fine))</value>
+    <comment>Match a common bool true expression.</comment>
+  </data>
+  <data name="rxDotNetRunFilename" xml:space="preserve">
+    <value>(?i:^\s*Filename\:\s*\"\{tmp\}\\{dotnetInstallerFilename}\")</value>
+    <comment>Regular expression to test for the presence of the run file containing the dotnet runtime installer.</comment>
+  </data>
+  <data name="rxDotNetRunFilenameFamily" xml:space="preserve">
+    <value>(?i:^\s*Filename\:\s*\"\{tmp\}\\{dotnetInstallerFamily})</value>
+    <comment>Regular expression to test for the presence of any file in the specified filename family of the dotnet runtime installer.</comment>
+  </data>
+  <data name="rxDotNetRuntimeFilePresence" xml:space="preserve">
+    <value>(?i:^\s*Source\:\s*\"\{\#SourcePath\}\\{dotnetInstallerFilename}\")</value>
+    <comment>Regular expression to test for the presence of the filename containing the dotnet runtime installer.</comment>
+  </data>
+  <data name="rxInnoSetupSectionName" xml:space="preserve">
+    <value>(?i:^\s*\[(?&lt;sectionName&gt;[^\]]+)\]\s*$)</value>
+    <comment>Regular expression for finding and extracting an INI section name.</comment>
+  </data>
+  <data name="rxLine" xml:space="preserve">
+    <value>(?m:^(?&lt;line&gt;[^\r\n]*)(\r{0,1}\n|$))</value>
+    <comment>Regular expression to extract individual lines from a multi-line string.</comment>
+  </data>
+  <data name="rxPascalBegin" xml:space="preserve">
+    <value>(?i:^\s*(?&lt;begin&gt;begin)\s*$)</value>
+    <comment>Regular expression to extract the begin keyword from a Pascal line.</comment>
+  </data>
+  <data name="rxPascalEnd" xml:space="preserve">
+    <value>(?i:^\s*(?&lt;end&gt;end)(?&lt;stopChar&gt;[\.\;]{0,1})\s*$)</value>
+    <comment>Regular expression to extract the end keyword and usage from a Pascal line.</comment>
+  </data>
+  <data name="Syntax" xml:space="preserve">
+    <value>Extended functionality supporting InnoSetup.</value>
+    <comment>Command-line syntax and instructions.</comment>
+  </data>
+</root>

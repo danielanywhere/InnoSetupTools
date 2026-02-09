@@ -22,6 +22,32 @@ When you have a version of SignTool.exe on your PC, locate the full path of the 
 
 <p>&nbsp;</p>
 
+### .NET Runtime Installers
+
+Download the Microsoft Windows Desktop version of the .NET runtime installers for .NET platforms 6, 7, 8, 9, and 10.
+
+After downloading each file, right-click the file and from the context menu, select **Properties**. Uncheck **Block** and click **OK**.
+
+After downloading the .NET runtime installers, copy them to your {Project}**\Resources** folder, where they can be accessed during runtime. Versions 6 through 9 may be set in stone at this time, but use different minor versions for 10 or add future versions, make sure you include those changes in the version cross-reference initializer at InnoSetupToolsUtil.cs / **RuntimeInstallerReferences**.
+
+Following are the links to the .NET Windows Desktop runtime installers used in this version.
+
+```plaintext
+https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/6.0.36/windowsdesktop-runtime-6.0.36-win-x64.exe
+https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/7.0.20/windowsdesktop-runtime-7.0.20-win-x64.exe
+https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.23/windowsdesktop-runtime-8.0.23-win-x64.exe
+https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/9.0.12/windowsdesktop-runtime-9.0.12-win-x64.exe
+https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.2/windowsdesktop-runtime-10.0.2-win-x64.exe
+
+
+File pattern:
+windowsdesktop-runtime-(?<version>\d+\.\d+\.\d+)-(?<platform>[^-]+)-(?<architecture>[^\.]+)\.exe
+
+
+```
+
+<p>&nbsp;</p>
+
 ## Examples
 
 The following command is used to run InnoSetupTools when compiling [danielanywhere/CaptionAll](https://github.com/danielanywhere/CaptionAll).
@@ -86,3 +112,9 @@ The following process is used in the above configuration.
 -   The final setup is compiled and signed.
 
 -   Your application setup is now ready to distribute.
+
+<p>&nbsp;</p>
+
+## Stay Tuned
+
+Please stay tuned. More information and functionality are both coming soon.
