@@ -48,14 +48,6 @@ The following configuration file is loaded by the command and used to compile th
 	"Actions":
 	[
 		{
-			"Remarks":
-			[
-				"In this version, the version is updated within the Compile and Publish step."
-			],
-			"Active": false,
-			"ActionType": "SetVersion"
-		},
-		{
 			"ActionType": "CompileAndPublish",
 			"Options": [ "SetVersion:true" ]
 		}
