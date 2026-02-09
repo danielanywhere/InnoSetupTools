@@ -11,14 +11,6 @@
 	"Actions":
 	[
 		{
-			"Remarks":
-			[
-				"In this version, the version is updated within the Compile and Publish step."
-			],
-			"Active": false,
-			"ActionType": "SetVersion"
-		},
-		{
 			"ActionType": "CompileAndPublish",
 			"Options": [ "SetVersion:true" ]
 		}
