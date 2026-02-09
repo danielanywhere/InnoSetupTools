@@ -4,17 +4,23 @@ This is a one-stop script management and packaging tool for Inno Setup that comp
 
 In the current version, much of the content of your \[Files\], \[Run\], and \[Code\] sections is handled for you, and it is left up to you to manage the definitions, \[Setup\], and other similar sections for now.
 
+<p>&nbsp;</p>
+
 ## Prerequisites
 
 For this application to produce reliable results, you will need to have a somewhat recent version of the full .NET SDK installed on your PC, which also includes MSBUILD.
 
 You will also need to make sure that you have the active MSBUILD application in your path.
 
+<p>&nbsp;</p>
+
 ### SignTool.exe
 
 SignTool is not included with the .NET SDK. However, you can either get it by installing the Windows SDK, or by adding it via Visual Studio installer if you are using the full version of Visual Studio.
 
 When you have a version of SignTool.exe on your PC, locate the full path of the tool, and assign that value to an environment variable named SIGNTOOLPATH.
+
+<p>&nbsp;</p>
 
 ## Examples
 
@@ -57,6 +63,8 @@ The following configuration file is loaded by the command and used to compile th
 }
 
 ```
+
+<p>&nbsp;</p>
 
 The following process is used in the above configuration.
 
