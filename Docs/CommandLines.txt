@@ -1,0 +1,2 @@
+InnoSetupTools /wait /config:C:\Files\Dropbox\Develop\Shared\CaptionAll\Scripts\InnoSetupToolsSetPackageFiles.json
+InnoSetupTools /wait /config:C:\Files\Dropbox\Develop\Shared\CaptionAll\Scripts\InnoSetupToolsVersionCompilePublish.json

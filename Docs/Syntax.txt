@@ -1,0 +1,35 @@
+Command-line tool for working with InnoSetup projects.
+
+Syntax:
+InnoSetupTools.exe  /config:{ConfigurationFilename}
+                    [/workingpath:{FolderPath}]
+                    [/wait]
+
+    /config -   Configuration file containing the commands to carry out.
+                Following is the expected schema.
+                ActionItem
+                {
+                    ActionType: string,
+                    Actions: ActionItem[],
+                    Active: bool,
+                    CertFilename: string,
+                    CertPassword: string,
+                    CertTimestampUrl: string,
+                    CSharpProjectFilename: string,
+                    CSharpPublishProfileName: string,
+                    CSharpPublishSettingsFilename: string,
+                    CSharpSolutionFilename: string,
+                    ExeFilename: string,
+                    InnoScriptFilename: string,
+                    InnoSetupCompilerFilename: string,
+                    InnoVersionVariable: string,
+                    InputFoldername: string,
+                    OutputFilename: string,
+                    OutputFoldername: string,
+                    ProjectFoldername: string,
+                    ProjectName: string,
+                    Remarks: string[],
+                    SetupFilename: string,
+                    Value: string,
+                    WorkingPath: string
+                }
