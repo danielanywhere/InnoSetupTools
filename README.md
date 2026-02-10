@@ -26,9 +26,9 @@ When you have a version of SignTool.exe on your PC, locate the full path of the 
 
 Download the Microsoft Windows Desktop version of the .NET runtime installers for .NET platforms 6, 7, 8, 9, and 10.
 
-After downloading each file, right-click the file and from the context menu, select **Properties**. Uncheck **Block** and click **OK**.
+After downloading each file, right-click the file and from the context menu, select **Properties**. Check **Unblock** and click **OK**.
 
-After downloading the .NET runtime installers, copy them to your {Project}**\Resources** folder, where they can be accessed during runtime. Versions 6 through 9 may be set in stone at this time, but use different minor versions for 10 or add future versions, make sure you include those changes in the version cross-reference initializer at InnoSetupToolsUtil.cs / **RuntimeInstallerReferences**.
+After downloading the .NET runtime installers, copy them to your {Project}**\Resources** folder, where they can be accessed during runtime. Versions 6 through 9 may be set in stone at this time, but if you use different minor versions for 10 or add future major versions, make sure you include those changes in the version cross-reference initializer at InnoSetupToolsUtil.cs / **RuntimeInstallerReferences**.
 
 Following are the links to the .NET Windows Desktop runtime installers used in this version.
 
